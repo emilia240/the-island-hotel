@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --width-full:100%;
+    --width-12col:1200px;
+    
+    --grid-gap:10px;
+    
+    --padding-default:20px;
+    
+    --background-color-light:#ededed;
+    --background-color-dark-color:#3C1909;
+    --blue-color:#2A87BA;
+    --color-white:#ffffff;
+    --hover-color:#FFFBA6;
+ 
+}
+
+/* general*/
+
+body {
+    background-color:var(--background-color-light);
+    font-family: "Fredoka", sans-serif;
+}
+
+nav {
+    background-color: var(--background-color-dark-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+li {
+    list-style-type: none;
+  }
+
+
+h1, h2, h3, h4, h5 {
+    font-family: "El Messiri", sans-serif;
+}
+
+p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+button {
+    background-color: var(--background-color-dark-color);
+    border: none;
+    border-radius: 10px;
+    cursor:pointer;
+    width: fit-content;
+    padding: 25px;
+    color: var(--background-color-light);
+    font-size: 18px;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--background-color-light);
+}
+a :hover {
+    color: var(--hover-color);
+}
+
+h1{
+    font-size: 96px;
+    text-shadow: #3C1909 3px 5px 10px;
+}
+
+h2{
+    font-family: "Fredoka", sans-serif;   
+    font-size: 40px;
+    font-weight: 400;
+    text-shadow: #3C1909 3px 5px 10px;
+}
+
+h3{
+    font-size: 38px;
+}
+
+h4{
+    font-size: 24px;
+    font-family: "Fredoka", sans-serif; 
+    font-weight: 400;
+}
+
+h5{
+    font-size: 22px;
+}
+
+i{
+    font-size: 20px;
+}
+
+
+
+.welcome-message, .overview, .testimonials{
+    margin: 40px 0;
+}
+
+footer {
+    margin-top: auto;
+}
+
+
+/* navigation */
+
+.logo {
+padding: 10px;
+}
+.menu ul{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu ul a {
+    font-family: "El Messiri", sans-serif;
+    font-size: 20px;
+}
+
+.menu ul li :hover{
+    color: var(--hover-color);
+}
+
+/*hero-section */
+
+.hero-section{
+    background-image: url('/img/hero-img.png');
+    width: var(--width-full);
+    height: auto;
+    min-height: 850px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--background-color-light);
+}
+
+.hero-container button{
+    margin-top: 120px;
+}
+
+
+
+
+
+/*welcome*/
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0px auto;
+    padding: 100px;
+}
+
+.welcome-container h4{
+    margin-bottom: 60px;
+}
+
+.welcome-container button{
+    margin-top: 90px;
+}
+
+
+
+
+
+/* overview */
+
+.overview-container {
+    width: var(--width-full);
+    padding: 40px 0;
+}
+
+.content_area_block {
+    width: var(--width-12col);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content_area_box {
+    background-color: var(--color-light);
+    color: var(--color_dark);
+    width: 50%;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 79px 93px;
+}
+
+.content_area_box_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.content_area_box_text h4{
+    font-family: "El Messiri", sans-serif;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+#rooms {
+    background-image: url(/img/rooms-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#spa {
+    background-image: url(/img/spa-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#restaurant {
+    background-image: url(/img/restaurant-img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+/* testimonials */
+.testimonials{
+    width: var(--width-full);
+    padding: 60px 0;
+}
+
+.testimonials h3{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.testimonials-container{
+    width: var(--width-12col);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--grid-gap);
+}
+
+.review-card{
+    flex: 1; /* Equal width cards */
+    min-width: 250px; 
+    background-color: var(--blue-color);
+    border-radius: 5px;
+    color: var(--background-color-light);
+    padding: 120px 20px;
+    text-align: center;
+}
+
+.review-card h5{
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* footer */
+
+.footer-container {
+    background-color: var(--background-color-dark-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    color: var(--background-color-light);
+    margin-top: auto;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+}
+.socials-block {
+    display: flex;
+    gap: 15px;
+}
+
+
+
+
+
+
+/* media q */
+@media (max-width: 1200px) {
+    /* Adjust container widths */
+    .content_area_block,
+    .testimonials-container,
+    .welcome-container {
+        width: 95%;
+        padding: 40px 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* Tablet: Stack overview boxes */
+    .content_area_box {
+        width: 100% !important; /* Force full width */
+        min-height: 300px;
+        padding: 40px;
+        align-items: center;
+    }
+    .content_area_box_text h4{
+        text-align: center;
+    }
+    #rooms,  #spa, #restaurant{
+       display: none;
+    }
+   
+    /* Reduce hero section height */
+    .hero-section {
+        min-height: 600px;
+    }
+
+    /* Center footer content */
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .socials-block {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile typography */
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    p, .menu ul a, button {
+        font-size: 16px;
+    }
+
+    /* Simplify nav */
+    .menu ul {
+        gap: 10px;
+    }
+
+    /* Adjust welcome section */
+    .welcome-container {
+        padding: 60px 20px;
+    }
+
+    /* Stack testimonials */
+    .review-card {
+        flex: 100% !important;
+        padding: 60px 20px;
+    }
+
+    /* Reduce button padding */
+    button {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Hide logo in footer */
+    .footer-container .logo {
+        display: none;
+    }
+
+    /* Hero section adjustments */
+    .hero-container button {
+        margin-top: 60px;
+    }
+
+    /* Single-column socials */
+    .socials {
+        align-items: center;
+    }
+}
